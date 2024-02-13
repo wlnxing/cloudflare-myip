@@ -1,4 +1,17 @@
 
+
+
+/**
+ * 
+ * @param {any} value 
+ * @returns {string}
+ */
+function toHtmlStr(value){
+  return typeof value === 'object'?JSON.stringify(value):value
+}
+
+
+
 // Export a default object containing event handlers
 export default {
 
@@ -14,7 +27,7 @@ export default {
       headers.forEach((value, key) => {
         trtd += `<tr>
           <td>${key}</td>
-          <td>${value}</td>
+          <td>${toHtmlStr(value)}</td>
         </tr>`
       })
 
@@ -83,7 +96,7 @@ export default {
                 return `
                   <tr>
                     <td>${key}</td>
-                    <td>${JSON.stringify(value)}</td>
+                    <td>${toHtmlStr(value)}</td>
                   </tr>`;
               }).join('')}
             </tbody>
