@@ -26,3 +26,12 @@ Get my IP through cloudflare worker
 
 
 2. 分两个域名, 分别只解析A, AAAA, 解析地址为cloudflare的地址, **不要打开cloudflare proxy**
+
+
+
+
+
+## TODO
+
+ - [ ] 添加api模式
+ - [ ] 分离前后端
